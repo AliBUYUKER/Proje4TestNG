@@ -46,10 +46,11 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(dr);
 
        // loginTest();
+
     }
     void loginTest()
     {
-        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+        driver.get("https://demo.nopcommerce.com/register?returnUrl=%2F");
 
         System.out.println("login test");
         WebElement inputEmail= driver.findElement(By.id("input-email"));
@@ -63,7 +64,7 @@ public class BaseDriver {
 
         Assert.assertEquals(driver.getTitle(),"My Account","Login başarısız");
     }
-    @AfterClass(enabled = false,
+    @AfterClass(enabled = true,
             groups = "SmokeTest")
     public void bitisIslemleri()
     {

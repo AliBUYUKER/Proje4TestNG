@@ -20,5 +20,9 @@ public class Tools{
         WebElement msgLabel= BaseDriver.driver.findElement(By.cssSelector("div[class='alert alert-success alert-dismissible'"));
         Assert.assertTrue(msgLabel.getText().toLowerCase().contains("success"));
     }
+    public static int randomNumber(){
+        int random=(int) (Math.random()*3);
+        return random;
+    }
 
 }
